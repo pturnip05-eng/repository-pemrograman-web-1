@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal - NexaTech Solutions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NexaTech Solutions</a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-light btn-sm">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Login -->
+    <main class="container my-auto py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold">Login Portal Klien & Admin</h4>
+                            <p class="text-muted small">Masuk untuk mengakses dashboard manajemen layanan</p>
+                        </div>
+
+                        <!-- Alert Pesan Error -->
+                        <div id="error-alert" class="alert alert-danger d-none" role="alert">
+                            Username atau Password salah! Silakan coba lagi.
+                        </div>
+
+                        <form id="loginForm" onsubmit="validasiLogin(event)">
+                            <div class="mb-3">
+                                <label for="username" class="form-label fw-semibold">Username atau Email</label>
+                                <input type="text" class="form-control" id="username" placeholder="Masukkan username (contoh: admin)" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-semibold">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Masukkan password (contoh: 12345)" required>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-primary fw-semibold">Masuk Sekarang</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <small class="text-muted">Belum punya akun? <a href="register.html" class="text-decoration-none">Daftar di sini</a></small>
+                        </div>
+                        <div class="alert alert-info mt-3 mb-0 py-2 small">
+                            <strong>Info Akun Demo:</strong><br>
+                            Username: <code>admin</code> | Password: <code>12345</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Identitas Mahasiswa -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <small>@Copyright by 24552011244_PETRUS SILILIN TURNIP_TIF RP 24E</small>
+        </div>
+    </footer>
+
+    <!-- Fungsi JavaScript Validasi Login (if / else) -->
+    <script>
+        function validasiLogin(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById("username").value.trim();
+            const passwordInput = document.getElementById("password").value.trim();
+            const errorAlert = document.getElementById("error-alert");
+
+            // Akun dummy default
+            const defaultUser = "admin";
+            const defaultPass = "12345";
+
+            if ((usernameInput === defaultUser || usernameInput === "admin@nexatech.co.id") && passwordInput === defaultPass) {
+                errorAlert.classList.add("d-none");
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("activeUser", usernameInput);
+                alert("Login Berhasil! Selamat datang di Dashboard NexaTech Solutions.");
+                window.location.href = "menu.html";
+            } else {
+                errorAlert.classList.remove("d-none");
+            }
+        }
+    </script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

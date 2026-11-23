@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaTech Solutions - Konsultan IT & Digital</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a2540 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        .card-service {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NexaTech Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layanan">Layanan Kami</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light btn-sm px-3 me-2" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary btn-sm px-3" href="register.html">Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <span class="badge bg-info text-dark mb-3 px-3 py-2 fw-semibold">IT Consultant & Software House</span>
+                    <h1 class="display-5 fw-bold mb-3">Transformasi Digital Bisnis Anda Bersama NexaTech</h1>
+                    <p class="lead mb-4 text-light opacity-75">
+                        Kami membantu perusahaan membangun infrastruktur jaringan yang aman, aplikasi enterprise terintegrasi, dan sistem cloud yang andal sejak 2019.
+                    </p>
+                    <a href="#layanan" class="btn btn-light btn-lg fw-semibold text-primary px-4">Jelajahi Layanan</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layanan & Informasi Perusahaan -->
+    <main id="layanan" class="container my-5 flex-grow-1">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Layanan & Solusi Utama</h2>
+            <p class="text-muted">Pilih solusi teknologi yang paling sesuai dengan kebutuhan operasional perusahaan Anda.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-primary-subtle text-primary w-25 mb-2">Enterprise</span>
+                        <h5 class="card-title fw-bold">Pengembangan Sistem ERP</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Integrasi modul keuangan, manajemen stok, SDM, dan rantai pasok dalam satu platform terpusat berbasis web dan mobile.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 25.000.000</small>
+                            <a href="detail.html?id=1" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-danger-subtle text-danger w-25 mb-2">Security</span>
+                        <h5 class="card-title fw-bold">Audit Keamanan Jaringan</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Pengujian penetrasi (Penetration Testing), konfigurasi firewall, dan penerapan standar ISO 27001 untuk melindungi aset data.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 15.000.000</small>
+                            <a href="detail.html?id=2" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-success-subtle text-success w-25 mb-2">Cloud</span>
+                        <h5 class="card-title fw-bold">Migrasi & Manajemen Cloud</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Pemindahan server lokal ke arsitektur cloud (AWS / Google Cloud) dengan jaminan uptime 99.9% dan backup otomatis.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 10.000.000</small>
+                            <a href="detail.html?id=3" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-warning-subtle text-dark w-25 mb-2">Mobile</span>
+                        <h5 class="card-title fw-bold">Aplikasi Mobile Android & iOS</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Pembuatan aplikasi presensi karyawan, e-commerce, maupun sistem pelacakan logistik berbasis Kotlin dan Flutter.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 18.000.000</small>
+                            <a href="detail.html?id=4" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-info-subtle text-dark w-25 mb-2">Data</span>
+                        <h5 class="card-title fw-bold">Business Intelligence & Analytics</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Visualisasi data penjualan dan performa operasional secara real-time untuk membantu pengambilan keputusan direksi.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 12.500.000</small>
+                            <a href="detail.html?id=5" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm card-service">
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-secondary-subtle text-secondary w-25 mb-2">Support</span>
+                        <h5 class="card-title fw-bold">IT Managed Services 24/7</h5>
+                        <p class="card-text text-muted flex-grow-1">
+                            Dukungan pemeliharaan rutin server, database, dan helpdesk teknis khusus bagi perusahaan tanpa tim IT internal.
+                        </p>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted fw-semibold">Mulai Rp 5.000.000/bln</small>
+                            <a href="detail.html?id=6" class="btn btn-primary btn-sm">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Identitas Mahasiswa -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <small>@Copyright by 24552011244_PETRUS SILILIN TURNIP_TIF RP 24E</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

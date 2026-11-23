@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi Akun - NexaTech Solutions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NexaTech Solutions</a>
+            <div class="ms-auto">
+                <a href="index.html" class="btn btn-outline-light btn-sm">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form Registrasi -->
+    <main class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <h4 class="fw-bold">Registrasi Pengguna Baru</h4>
+                            <p class="text-muted small">Buat akun untuk mengajukan layanan konsultasi IT perusahaan Anda</p>
+                        </div>
+
+                        <form onsubmit="prosesRegistrasi(event)">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="namaDepan" class="form-label fw-semibold">Nama Depan</label>
+                                    <input type="text" class="form-control" id="namaDepan" placeholder="Contoh: Petrus" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="namaBelakang" class="form-label fw-semibold">Nama Belakang</label>
+                                    <input type="text" class="form-control" id="namaBelakang" placeholder="Contoh: Turnip" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Alamat Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="nama@perusahaan.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="regUsername" class="form-label fw-semibold">Username</label>
+                                <input type="text" class="form-control" id="regUsername" placeholder="Pilih username unik" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="regPassword" class="form-label fw-semibold">Password</label>
+                                <input type="password" class="form-control" id="regPassword" placeholder="Minimal 5 karakter" minlength="5" required>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="setujuSyarat" required>
+                                <label class="form-check-label small text-muted" for="setujuSyarat">
+                                    Saya menyetujui syarat & ketentuan layanan NexaTech Solutions.
+                                </label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary fw-semibold">Daftar Akun</button>
+                            </div>
+                        </form>
+
+                        <div class="text-center mt-3">
+                            <small class="text-muted">Sudah memiliki akun? <a href="login.html" class="text-decoration-none">Login di sini</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Identitas Mahasiswa -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <small>@Copyright by 24552011244_PETRUS SILILIN TURNIP_TIF RP 24E</small>
+        </div>
+    </footer>
+
+    <script>
+        function prosesRegistrasi(event) {
+            event.preventDefault();
+            const namaDepan = document.getElementById("namaDepan").value;
+            alert("Registrasi berhasil untuk " + namaDepan + "! Silakan login menggunakan akun Anda.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

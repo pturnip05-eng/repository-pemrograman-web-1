@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Menu Utama - NexaTech Solutions</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <!-- Navbar Dashboard -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="menu.html">NexaTech Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Lihat Website Publik</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button onclick="logout()" class="btn btn-danger btn-sm px-3">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Dashboard -->
+    <main class="container my-5 flex-grow-1">
+        <!-- Header Sambutan -->
+        <div class="p-4 mb-4 bg-white rounded shadow-sm border-start border-primary border-4 d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <h3 class="fw-bold mb-1">Selamat Datang, <span id="display-user" class="text-primary">Admin</span>!</h3>
+                <p class="text-muted mb-0">Panel Manajemen Layanan & Monitoring Klien NexaTech Solutions.</p>
+            </div>
+            <div class="mt-3 mt-md-0">
+                <span class="badge bg-success px-3 py-2">Status Sistem: Online</span>
+            </div>
+        </div>
+
+        <!-- Ringkasan Statistik Perusahaan -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-3">
+                    <h6 class="text-muted text-uppercase small fw-bold">Total Klien Aktif</h6>
+                    <h2 class="fw-bold text-primary my-2">48</h2>
+                    <small class="text-success">+5 klien bulan ini</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-3">
+                    <h6 class="text-muted text-uppercase small fw-bold">Proyek Berjalan</h6>
+                    <h2 class="fw-bold text-warning my-2">12</h2>
+                    <small class="text-muted">ERP, Mobile & Cloud</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-3">
+                    <h6 class="text-muted text-uppercase small fw-bold">Tiket Support</h6>
+                    <h2 class="fw-bold text-danger my-2">3</h2>
+                    <small class="text-muted">Menunggu penanganan</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm text-center p-3">
+                    <h6 class="text-muted text-uppercase small fw-bold">Server Uptime</h6>
+                    <h2 class="fw-bold text-success my-2">99.98%</h2>
+                    <small class="text-muted">30 hari terakhir</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Monitoring Proyek Dummy -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white py-3">
+                <h5 class="fw-bold mb-0">Daftar Proyek Klien Terkini</h5>
+            </div>
+            <div class="card-body table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID Proyek</th>
+                            <th>Nama Perusahaan Klien</th>
+                            <th>Layanan</th>
+                            <th>Progress</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#PRJ-101</strong></td>
+                            <td>PT Sinar Logistik Nusantara</td>
+                            <td>Pengembangan Sistem ERP</td>
+                            <td>85%</td>
+                            <td><span class="badge bg-primary">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>#PRJ-102</strong></td>
+                            <td>CV Mitra Karya Digital</td>
+                            <td>Audit Keamanan Jaringan</td>
+                            <td>100%</td>
+                            <td><span class="badge bg-success">Selesai</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>#PRJ-103</strong></td>
+                            <td>Koperasi Sejahtera Mandiri</td>
+                            <td>Aplikasi Mobile Android</td>
+                            <td>60%</td>
+                            <td><span class="badge bg-primary">In Progress</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>#PRJ-104</strong></td>
+                            <td>PT Agro Makmur Abadi</td>
+                            <td>Migrasi & Manajemen Cloud</td>
+                            <td>30%</td>
+                            <td><span class="badge bg-warning text-dark">Review Arsitektur</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Identitas Mahasiswa -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <small>@Copyright by 24552011244_PETRUS SILILIN TURNIP_TIF RP 24E</small>
+        </div>
+    </footer>
+
+    <!-- Validasi Sesi & Fungsi Logout -->
+    <script>
+        // Cek apakah pengguna sudah login
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            alert("Akses ditolak! Silakan login terlebih dahulu.");
+            window.location.href = "login.html";
+        } else {
+            const user = localStorage.getItem("activeUser") || "Admin";
+            document.getElementById("display-user").textContent = user;
+        }
+
+        function logout() {
+            localStorage.removeItem("isLoggedIn");
+            localStorage.removeItem("activeUser");
+            alert("Anda telah berhasil logout.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
